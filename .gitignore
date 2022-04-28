@@ -1,30 +1,35 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# dev files
-.eslintignore
-.eslintrc.js
-.prettierignore
-.prettierrc
+diff --git a/.gitignore b/.gitignore
+index 3c21a9d..e69de29 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,30 +0,0 @@
+-# Logs
+-logs
+-*.log
+-npm-debug.log*
+-yarn-debug.log*
+-yarn-error.log*
+-pnpm-debug.log*
+-lerna-debug.log*
+-
+-node_modules
+-dist
+-dist-ssr
+-*.local
+-
+-# Editor directories and files
+-.vscode/*
+-!.vscode/extensions.json
+-.idea
+-.DS_Store
+-*.suo
+-*.ntvs*
+-*.njsproj
+-*.sln
+-*.sw?
+-
+-# dev files
+-.eslintignore
+-.eslintrc.js
+-.prettierignore
+-.prettierrc
