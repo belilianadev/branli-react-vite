@@ -12,8 +12,8 @@ index 3c21a9d..e69de29 100644
 -pnpm-debug.log*
 -lerna-debug.log*
 -
--node_modules
--dist
+node_modules
+dist
 -dist-ssr
 -*.local
 -
@@ -30,6 +30,6 @@ index 3c21a9d..e69de29 100644
 -
 -# dev files
 -.eslintignore
--.eslintrc.js
+-.eslintrc.cjs
 -.prettierignore
 -.prettierrc
