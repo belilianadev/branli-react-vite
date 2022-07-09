@@ -5,7 +5,7 @@ import UserList from "../components/Users/UserList";
 import UserForm from "../components/Users/UserForm";
 // import Panel from "./Panel/Panel";
 import NoFound from "./NoFound/NoFound";
-import PanelAntd from "./Panel/Panel";
+import PanelAntd from "./Panel/PanelAntd/PanelAntd";
 
 const RoutesIndex = () => {
   return (

@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { HomeTwoTone } from "@ant-design/icons";
 
 function Nav() {
   return (
@@ -6,7 +7,8 @@ function Nav() {
       <ul>
         <li>
           <NavLink className="active" to="/prueba">
-            <i className="fa-solid fa-shop"></i>Compras
+            <HomeTwoTone twoToneColor="#ffec3d" />
+            Compras
           </NavLink>
         </li>
         <li>
