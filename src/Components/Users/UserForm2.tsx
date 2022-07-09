@@ -2,7 +2,7 @@ import { Form, Input, Button } from "antd";
 import { ChangeEvent, useState } from "react";
 import { FieldData } from "../../models/AntIntefaces";
 import { UserModel } from "../../models/UserModel";
-import { createUser } from "../../Services/UserService";
+import { createUser } from "../../services/UserService";
 
 const initialState: UserModel = {
   usuario: "",

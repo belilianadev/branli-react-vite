@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ListUser } from "../../Services/UserService";
+import { ListUser } from "../../services/UserService";
 
 const UserList = () => {
   useEffect(() => {
