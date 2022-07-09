@@ -6,7 +6,7 @@
   margin: auto;
 }
 
-.form {
+.formLogin {
   position: relative;
   z-index: 1;
   background: rgba(148,215,198,1);
@@ -18,7 +18,7 @@
   border-radius: 5%;
 }
 
-.form input {
+.formLogin input {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -30,7 +30,7 @@
   font-size: 14px;
 }
 
-.form button {
+.formLogin button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -45,13 +45,13 @@
   cursor: pointer;
 }
 
-.form button:hover,.form button:active,.form button:focus {
+.formLogin button:hover,.formLogin button:active,.formLogin button:focus {
   background: white;
   color: rgb(13, 94, 114);
   font-weight: bold;
 }
 
-.contenedor {
+.ctnLogin {
 background: rgb(255,255,255);
 background: linear-gradient(90deg, rgba(255,255,255,1) 27%, rgba(140,212,184,1) 87%, rgba(16,131,154,1) 100%);
 font-family: "Roboto", sans-serif;

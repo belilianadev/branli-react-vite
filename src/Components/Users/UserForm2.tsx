@@ -1,7 +1,7 @@
 import { Form, Input, Button } from "antd";
 import { ChangeEvent, useState } from "react";
-import { FieldData } from "../../Models/AntIntefaces";
-import { UserModel } from "../../Models/UserModel";
+import { FieldData } from "../../models/AntIntefaces";
+import { UserModel } from "../../models/UserModel";
 import { createUser } from "../../Services/UserService";
 
 const initialState: UserModel = {
@@ -23,7 +23,7 @@ const UserForm = () => {
   const handleFormChange = (
     changedFields: FieldData[],
     allFields: FieldData[]
-  ) => {
+  ): void => {
     console.log("SetData2: " + JSON.stringify(changedFields[0].name));
   };
 

@@ -2,9 +2,9 @@ import "./LogIn.css";
 
 function Login() {
   return (
-    <div className="contenedor">
+    <div className="ctnLogin">
       <div className="login-page">
-        <div className="form">
+        <div className="formLogin">
           <form className="login-form">
             <input type="text" placeholder="username" />
             <input type="password" placeholder="password" />

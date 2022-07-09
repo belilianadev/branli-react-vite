@@ -1,4 +1,4 @@
-import { UserModel } from "../Models/UserModel";
+import { UserModel } from "../models/UserModel";
 
 const URI_USERS = "usuarios";
 

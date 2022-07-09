@@ -33,3 +33,6 @@ dist
 -.eslintrc.cjs
 -.prettierignore
 -.prettierrc
+-
+.# file env
+.env

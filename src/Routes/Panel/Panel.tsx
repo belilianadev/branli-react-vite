@@ -1,3 +1,4 @@
+import "./Panel.css";
 import Nav from "./Nav";
 import Aside from "./Aside";
 import { Outlet } from "react-router-dom";

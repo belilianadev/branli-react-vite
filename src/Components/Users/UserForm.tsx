@@ -1,72 +1,107 @@
-import "antd/es/form/style";
-import "antd/es/input/style";
-import "antd/es/button/style";
-import { layoutForm } from "../../Helpers/settingsFormAntd";
+import { layoutForm } from "../../helpers/settingsFormAntd";
 
-import { Form, Input, Button } from "antd";
-import { UserModel } from "../../Models/UserModel";
-import { createUser } from "../../Services/UserService";
+import { Form, Input, Button, Row, Col } from "antd";
+import { UserModel } from "../../models/UserModel";
 
-const initialState: UserModel = {
-  usuario: "a",
-  contrasenia: "b",
-};
-
-const UserForm = () => {
+const UserForm = (initialState: any, method: any) => {
   const [form] = Form.useForm();
 
-  /*  const handleFormChange = (changedValues: any, values: UserModel): void => {
-    console.log(
-      "probando: " +
-        JSON.stringify(changedValues) +
-        " values: " +
-        JSON.stringify(values)
-    );
-
-     form.setFieldsValue({ usuario: "maraina" });
-
-    console.log("SetData2: " + JSON.stringify(form.getFieldsValue(true)));
-  }; */
-
   const handleSubmit = (values: UserModel) => {
-    alert("values: " + JSON.stringify(values));
-    createUser(values);
+    method(values);
   };
 
   return (
-    <div>
-      <Form
-        {...layoutForm}
-        form={form}
-        name="dataUser"
-        initialValues={initialState}
-        onFinish={handleSubmit}
+    <Form
+      {...layoutForm}
+      form={form}
+      name="dataForm"
+      initialValues={initialState}
+      onFinish={handleSubmit}
+    >
+      <Row justify="start">
+        <Col span={12}>
+          <Form.Item
+            label="Usuario"
+            name="usuario"
+            rules={[
+              { required: true, message: "Ingresa tu nombre de usuario" },
+            ]}
+            hasFeedback={true}
+          >
+            <Input />
+          </Form.Item>
+        </Col>
+      </Row>
+      <Form.Item
+        label="Nombre"
+        name="nombre"
+        rules={[{ required: true, message: "Ingresa tu nombre de usuario" }]}
+        hasFeedback={true}
       >
-        <Form.Item
-          label="Usuario"
-          name="usuario"
-          rules={[{ required: true, message: "Ingresa tu nombre de usuario" }]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          label="Contraseña"
-          name="contrasenia"
-          rules={[
-            { required: true, message: "Ingresa la contraseña correcta" },
-          ]}
-        >
-          <Input.Password />
-        </Form.Item>
-
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
-    </div>
+        <Input />
+      </Form.Item>
+      <Form.Item
+        label="Nombre2"
+        name="nombre2"
+        rules={[{ required: true, message: "Ingresa tu nombre de usuario" }]}
+        hasFeedback={true}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        label="Nombre3"
+        name="nombre3"
+        rules={[{ required: true, message: "Ingresa tu nombre de usuario" }]}
+        hasFeedback={true}
+      >
+        <Input />
+      </Form.Item>{" "}
+      <Form.Item
+        label="Nombre4"
+        name="nombre4"
+        rules={[{ required: true, message: "Ingresa tu nombre de usuario" }]}
+        hasFeedback={true}
+      >
+        <Input />
+      </Form.Item>{" "}
+      <Form.Item
+        label="Nombre5"
+        name="nombre5"
+        rules={[{ required: true, message: "Ingresa tu nombre de usuario" }]}
+        hasFeedback={true}
+      >
+        <Input />
+      </Form.Item>{" "}
+      <Form.Item
+        label="Nombre6"
+        name="nombre6"
+        rules={[{ required: true, message: "Ingresa tu nombre de usuario" }]}
+        hasFeedback={true}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        label="Nombree"
+        name="nombree"
+        rules={[{ required: true, message: "Ingresa tu nombre de usuario" }]}
+        hasFeedback={true}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        label="Contraseña"
+        name="contrasenia"
+        hasFeedback={true}
+        rules={[{ required: true, message: "Ingresa la contraseña correcta" }]}
+      >
+        <Input.Password />
+      </Form.Item>
+      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+        <Button type="primary" htmlType="submit">
+          Submit
+        </Button>
+      </Form.Item>
+    </Form>
   );
 };
 

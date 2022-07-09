@@ -1,7 +1,7 @@
 import Nav from "./Nav";
 import Aside from "./Aside";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import User from "../../Components/Users/User";
+import User from "../../components/Users/User";
 import NoFound from "../NoFound/NoFound";
 
 function Panel() {
