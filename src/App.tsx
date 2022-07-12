@@ -1,5 +1,5 @@
 import RoutesIndex from "./routes/RoutesIndex";
-import Login from "./routes/LogIn/Login2";
+import Login from "./routes/LogIn/Login";
 
 function App() {
   const log = false;
