@@ -5,3 +5,9 @@ export interface FieldData {
   validating?: boolean;
   errors?: string[];
 }
+
+export interface ItemMenuNav {
+  key: string;
+  label: string | JSX.Element;
+  icon: JSX.Element;
+}

@@ -26,6 +26,15 @@ module.exports = {
     'react',
     '@typescript-eslint'
   ],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+  ],
   rules: {
+  // "react/prop-types": "off"
   }
 }

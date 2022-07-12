@@ -1,0 +1,22 @@
+
+.header .logo {
+  float: left;
+  width: 125px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+.ant-layout-sider {
+  background: #94D7C6;
+}
+
+/* .ant-row-rtl .header .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+ 

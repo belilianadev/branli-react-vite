@@ -1,0 +1,19 @@
+.page-no-found{
+    display: grid;
+    font-size: 60px;
+    color: #0D5E72;
+    place-content: center;
+}
+
+#text-page-no-found {
+    text-align: center;
+    margin: 35% auto 5% auto;
+}
+ 
+#icon-page-no-found {
+   margin: 0 auto
+} 
+
+body {
+    background-color: #94D7C6;
+}
