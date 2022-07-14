@@ -4,6 +4,8 @@ import { DatabaseTwoTone, HomeTwoTone, ShopTwoTone } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { ItemMenuNav } from "../../models/AntIntefaces";
 import { propIcon } from "../../helpers/settingsFormAntd";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserProvider";
 
 const { Header } = Layout;
 
@@ -48,11 +50,6 @@ export const itemsMenuNav: ItemMenuNav[] = [
     label: "Usuarios",
     icon: <DatabaseTwoTone {...propIcon} />,
   },
-  {
-    key: "salir",
-    label: "Salir",
-    icon: <DatabaseTwoTone {...propIcon} />,
-  },
 ];
 
 type Props = {
@@ -60,6 +57,28 @@ type Props = {
 };
 
 const HeaderAntd: React.FC<Props> = ({ clicMenuNav }) => {
+  const { logOut } = useContext(UserContext);
+
+  const items1 = itemsMenuNav.map(({ key, label, icon }) => ({
+    key,
+    label: <NavLink to={`/${key}`}>{label}</NavLink>,
+    icon,
+    onClick: () => {
+      clicMenuNav(key);
+    },
+  }));
+
+  const items2 = [
+    {
+      key: "salir",
+      label: "Salir",
+      icon: <DatabaseTwoTone {...propIcon} />,
+      onClick: () => {
+        logOut();
+      },
+    },
+  ];
+
   return (
     <Header
       className="header"
@@ -71,14 +90,7 @@ const HeaderAntd: React.FC<Props> = ({ clicMenuNav }) => {
         theme="light"
         mode="horizontal"
         defaultSelectedKeys={[""]}
-        items={itemsMenuNav.map(({ key, label, icon }) => ({
-          key,
-          label: <NavLink to={`/${key}`}>{label}</NavLink>,
-          icon,
-          onClick: () => {
-            clicMenuNav(key);
-          },
-        }))}
+        items={[...items1, ...items2]}
       />
     </Header>
   );

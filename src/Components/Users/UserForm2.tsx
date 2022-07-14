@@ -1,6 +1,6 @@
 import { Form, Input, Button } from "antd";
 import { ChangeEvent, useState } from "react";
-import { FieldData } from "../../models/AntIntefaces";
+// import { FieldData } from "../../models/AntIntefaces";
 import { UserModel } from "../../models/UserModel";
 import { createUser } from "../../services/UserService";
 
@@ -20,12 +20,12 @@ const UserForm = () => {
     console.log("SetData: " + userData.usuario + " " + evt.target.name);
   };
 
-  const handleFormChange = (
+  /*   const handleFormChange = (
     changedFields: FieldData[],
     allFields: FieldData[]
   ): void => {
     console.log("SetData2: " + JSON.stringify(changedFields[0].name));
-  };
+  }; */
 
   const handleSubmit = (values: UserModel) => {
     alert("values: " + JSON.stringify(values));
@@ -52,7 +52,7 @@ const UserForm = () => {
         wrapperCol={{ span: 16 }}
         initialValues={{ remember: true }}
         onFinish={handleSubmit}
-        onFieldsChange={handleFormChange}
+        // onFieldsChange={handleFormChange}
       >
         <Form.Item
           label="usuario"

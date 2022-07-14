@@ -1,35 +1,46 @@
-import "./LogIn2.css";
+import "./LogIn.css";
 import { Button, Col, Form, Input, Row } from "antd";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserProvider";
 
-const Login2 = () => {
+const LogIn = () => {
+  const { logIn } = useContext(UserContext);
+
+  const handleSubmit = (values: any) => {
+    logIn();
+    console.log("Success:", values);
+  };
+
+  const handleSubmitFailed = (errorInfo: any) => {
+    console.log("Failed:", errorInfo);
+  };
+
   return (
     <Row style={{ height: "100vh" }} align="middle" justify="center">
       <div className="box-login">
         <div className="box-logo-login">Branli</div>
         <div className="box-login-form">
           <Form
-            name="basic"
+            name="formLogin"
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 16 }}
             initialValues={{ remember: true }}
             autoComplete="off"
+            onFinish={handleSubmit}
+            onFinishFailed={handleSubmitFailed}
           >
             <Form.Item
-              label="Username"
-              name="username"
-              rules={[
-                { required: true, message: "Please input your username!" },
-              ]}
+              label="Usuario"
+              name="usuario"
+              rules={[{ required: true, message: "Introduce tu usuario" }]}
             >
               <Input />
             </Form.Item>
 
             <Form.Item
-              label="Password"
-              name="password"
-              rules={[
-                { required: true, message: "Please input your password!" },
-              ]}
+              label="Contraseña"
+              name="contrasenia"
+              rules={[{ required: true, message: "Introduce tu contrseña" }]}
             >
               <Input.Password />
             </Form.Item>
@@ -50,4 +61,4 @@ const Login2 = () => {
   );
 };
 
-export default Login2;
+export default LogIn;

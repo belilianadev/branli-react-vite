@@ -12,7 +12,6 @@ import { ItemMenuNav } from "../../models/AntIntefaces";
 import { propIcon } from "../../helpers/settingsFormAntd";
 
 const { Sider } = Layout;
-
 type Props = {
   selected?: string;
   clicCollapsedMenu: (isCollapsedMenu: boolean) => void;
@@ -44,7 +43,6 @@ type Props = {
 
 const SiderAntd: React.FC<Props> = ({ selected = "/", clicCollapsedMenu }) => {
   const [collapsed, setCollapsed] = useState(false);
-
   let optionsComponents: ItemMenuNav[] = [
     {
       key: "default",
@@ -64,6 +62,7 @@ const SiderAntd: React.FC<Props> = ({ selected = "/", clicCollapsedMenu }) => {
         };
       });
       break;
+
     default:
     // code block
   }

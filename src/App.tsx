@@ -1,8 +1,10 @@
 import RoutesIndex from "./routes/RoutesIndex";
-import Login from "./routes/LogIn/Login";
+import LogIn from "./routes/LogIn/LogIn";
+import { useContext } from "react";
+import { UserContext } from "./contexts/UserProvider";
 
 function App() {
-  const log = false;
-  return <>{log ? <RoutesIndex /> : <Login />}</>;
+  const { isLogUser } = useContext(UserContext);
+  return <>{isLogUser ? <RoutesIndex /> : <LogIn />}</>;
 }
 export default App;
