@@ -6,8 +6,6 @@ import {
 } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { useState } from "react";
-import { options as optUsers } from "../../components/Users/UserIndex";
-import { NavLink } from "react-router-dom";
 import { ItemMenuNav } from "../../models/AntIntefaces";
 import { propIcon } from "../../helpers/settingsFormAntd";
 
@@ -41,31 +39,15 @@ type Props = {
   };
 }); */
 
-const SiderAntd: React.FC<Props> = ({ selected = "/", clicCollapsedMenu }) => {
+const SiderAntd: React.FC<Props> = ({ clicCollapsedMenu }) => {
   const [collapsed, setCollapsed] = useState(false);
-  let optionsComponents: ItemMenuNav[] = [
+  const optionsComponents: ItemMenuNav[] = [
     {
       key: "default",
       label: "Default",
       icon: <HomeTwoTone {...propIcon} />,
     },
   ];
-
-  switch (selected) {
-    case "usuarios":
-      console.log("llegue a sider: " + JSON.stringify(optUsers));
-      optionsComponents = optUsers.map(({ key, label, icon }) => {
-        return {
-          key: key.concat(label),
-          label: <NavLink to={`/${selected}/${key}`}>{label}</NavLink>,
-          icon,
-        };
-      });
-      break;
-
-    default:
-    // code block
-  }
 
   return (
     <Sider
@@ -102,7 +84,6 @@ const SiderAntd: React.FC<Props> = ({ selected = "/", clicCollapsedMenu }) => {
 };
 
 SiderAntd.propTypes = {
-  selected: PropTypes.string,
   clicCollapsedMenu: PropTypes.func.isRequired,
 };
 

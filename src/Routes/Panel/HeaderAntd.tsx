@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { DatabaseTwoTone, HomeTwoTone, ShopTwoTone } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
@@ -52,20 +51,13 @@ export const itemsMenuNav: ItemMenuNav[] = [
   },
 ];
 
-type Props = {
-  clicMenuNav: (option: string) => void;
-};
-
-const HeaderAntd: React.FC<Props> = ({ clicMenuNav }) => {
+const HeaderAntd = () => {
   const { logOut } = useContext(UserContext);
 
   const items1 = itemsMenuNav.map(({ key, label, icon }) => ({
     key,
     label: <NavLink to={`/${key}`}>{label}</NavLink>,
     icon,
-    onClick: () => {
-      clicMenuNav(key);
-    },
   }));
 
   const items2 = [
@@ -94,10 +86,6 @@ const HeaderAntd: React.FC<Props> = ({ clicMenuNav }) => {
       />
     </Header>
   );
-};
-
-HeaderAntd.propTypes = {
-  clicMenuNav: PropTypes.any,
 };
 
 export default HeaderAntd;
