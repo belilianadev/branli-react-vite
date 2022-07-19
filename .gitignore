@@ -34,5 +34,5 @@ dist
 -.prettierignore
 -.prettierrc
 -
-.# file env
+-# file env
 .env
