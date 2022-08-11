@@ -26,6 +26,7 @@ export default defineConfig({
           "@font-size-base": "16px",
           "@layout-header-background": "#94D7C6",
           "@menu-bg": "#94D7C6",
+          "@layout-footer-background": "#94D7C6",
         },
       },
     },
